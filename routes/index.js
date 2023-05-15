@@ -30,7 +30,7 @@ router.get('/booking', checkToken.validateToken, bookingCtrl.getBookings);
 
 router.post('/booking', checkToken.validateToken, bookingCtrl.createBookings);
 
-// router.put('/booking', bookingCtrl.cancelBookings);
+router.put('/booking', checkToken.validateToken, bookingCtrl.cancelBookings);
 
 
 module.exports = router;

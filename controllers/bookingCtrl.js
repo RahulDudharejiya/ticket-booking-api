@@ -40,3 +40,15 @@ module.exports.createBookings = async (req, res) => {
     }
     return res.status(rcResponse.code).send(rcResponse);
 };
+
+/* Cancel Bookings */
+module.exports.cancelBookings = async (req, res) => {
+    let rcResponse = new ApiResponse();
+    let { body, decoded } = req;
+    try {
+        rcResponse.data = await commonModel.findOneAndUpdate('booking', { _id: body._id }, { $set: body });
+    } catch (err) {
+        handleError(req, err, rcResponse);
+    }
+    return res.status(rcResponse.code).send(rcResponse);
+};

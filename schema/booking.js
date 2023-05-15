@@ -20,6 +20,10 @@ const bookingSchema = new Schema({
         type: String,
         enum: ['First Half', 'Second Half']
     },
+    status: {
+        type: String,
+        enum: ['Booked', 'Cancelled']
+    },
     bookingTime: { type: String },
     created: { type: Date, default: Date.now },
     updated: { type: Date, default: Date.now },
