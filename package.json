@@ -1,0 +1,26 @@
+{
+  "name": "ticketbooking",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./bin/www",
+  "engines": {
+    "node": "8.9.0"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.13.2",
+    "crypto": "^1.0.1",
+    "debug": "~2.2.0",
+    "dotenv": "^5.0.1",
+    "express": "~4.13.1",
+    "hmac-validator": "^0.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "mongoose": "^5.4.13",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
